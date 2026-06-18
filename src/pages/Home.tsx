@@ -1,7 +1,6 @@
 import { Hero } from '../components/Hero';
 import { ProjectCard } from '../components/ProjectCard';
 import { projects } from '../data/projects';
-import { topUsers } from '../utils/stats';
 
 export function Home() {
   return (
@@ -19,13 +18,6 @@ export function Home() {
             {projects.slice(0, 3).map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
-          </div>
-        </div>
-      </section>
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

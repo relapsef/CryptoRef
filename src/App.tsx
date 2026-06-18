@@ -19,7 +19,6 @@ export default function App() {
       </Routes>
       <footer className="footer">
         <div className="container">CryptoRef © 2026</div>
-        </div>
       </footer>
     </>
   );
