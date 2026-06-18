@@ -7,29 +7,29 @@ export function AddReferralPage() {
         <div className="panel" style={{ maxWidth: 820, margin: '0 auto' }}>
           <div className="section-title">
             <div>
-              <h2>Добавить рефку</h2>
-              <p>Пока это демо-форма. Чтобы реально сохранять данные, подключи Airtable, Supabase или Firebase.</p>
+              <h2>Submit a Referral Link</h2>
+              <p>This is a demo form. To save data for real, connect Supabase, Airtable, or Firebase.</p>
             </div>
           </div>
           <form
             className="form"
             onSubmit={(e) => {
               e.preventDefault();
-              alert('Демо: форма работает, но данные пока не сохраняются.');
+              alert('Demo: the form works, but data is not saved yet.');
             }}
           >
             <select required defaultValue="">
-              <option value="" disabled>Выбери проект</option>
+              <option value="" disabled>Select a project</option>
               {projects.map((project) => (
                 <option key={project.id} value={project.id}>{project.name}</option>
               ))}
             </select>
-            <input required placeholder="Твой ник" />
+            <input required placeholder="Your username" />
             <input placeholder="Telegram / Twitter" />
-            <input required placeholder="Название рефки" />
-            <input required placeholder="Реферальная ссылка" type="url" />
-            <textarea required placeholder="Короткое описание: что за проект, что делать, есть ли бонус" />
-            <button className="btn primary" type="submit">Отправить на модерацию</button>
+            <input required placeholder="Ref link title" />
+            <input required placeholder="Referral link" type="url" />
+            <textarea required placeholder="Short description: what's the project, what to do, any bonus?" />
+            <button className="btn primary" type="submit">Submit for Review</button>
           </form>
         </div>
       </div>

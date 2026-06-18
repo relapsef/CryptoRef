@@ -10,8 +10,8 @@ export function Home() {
         <div className="container">
           <div className="section-title">
             <div>
-              <h2>🔥 Популярные проекты</h2>
-              <p>Проекты, где уже можно оставлять и искать рефки.</p>
+              <h2>🔥 Popular Projects</h2>
+              <p>Projects where you can already browse and submit referral links.</p>
             </div>
           </div>
           <div className="grid">

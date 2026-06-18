@@ -15,9 +15,9 @@ export function ProjectDetail() {
       <section className="section">
         <div className="container">
           <div className="panel">
-            <h2>Проект не найден</h2>
+            <h2>Project not found</h2>
             <button className="btn" onClick={() => navigate('/projects')}>
-              <ArrowLeft size={16} /> Назад к проектам
+              <ArrowLeft size={16} /> Back to Projects
             </button>
           </div>
         </div>
@@ -34,7 +34,7 @@ export function ProjectDetail() {
     <section className="section">
       <div className="container">
         <button className="btn" onClick={() => navigate('/projects')}>
-          <ArrowLeft size={16} /> Назад
+          <ArrowLeft size={16} /> Back
         </button>
 
         <div className="panel" style={{ marginTop: 18 }}>
@@ -48,20 +48,20 @@ export function ProjectDetail() {
               </div>
             </div>
             <button className="btn primary" onClick={() => navigate('/add')}>
-              Добавить рефку
+              Add Ref Link
             </button>
           </div>
           <div className="stats" style={{ maxWidth: 'none' }}>
-            <div className="stat"><strong>{stats.referrals}</strong><span>рефок</span></div>
-            <div className="stat"><strong>{stats.users}</strong><span>пользователей</span></div>
-            <div className="stat"><strong>{stats.likes}</strong><span>лайков</span></div>
+            <div className="stat"><strong>{stats.referrals}</strong><span>ref links</span></div>
+            <div className="stat"><strong>{stats.users}</strong><span>users</span></div>
+            <div className="stat"><strong>{stats.likes}</strong><span>likes</span></div>
           </div>
         </div>
 
         <div className="section-title" style={{ marginTop: 34 }}>
           <div>
-            <h2>Рефки пользователей</h2>
-            <p>Сортировка по лайкам. Позже можно подключить реальные лайки и авторизацию.</p>
+            <h2>Community Referrals</h2>
+            <p>Sorted by likes. Real likes and auth can be added later.</p>
           </div>
         </div>
 
@@ -69,9 +69,9 @@ export function ProjectDetail() {
           projectReferrals.map((ref) => <ReferralCard key={ref.id} referral={ref} />)
         ) : (
           <div className="panel">
-            <h3>Рефок пока нет</h3>
-            <p className="muted">Будь первым, кто добавит ссылку под этот проект.</p>
-            <button className="btn primary" onClick={() => navigate('/add')}>Добавить рефку</button>
+            <h3>No referrals yet</h3>
+            <p className="muted">Be the first to add a link for this project.</p>
+            <button className="btn primary" onClick={() => navigate('/add')}>Add Ref Link</button>
           </div>
         )}
       </div>

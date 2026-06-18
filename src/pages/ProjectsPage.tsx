@@ -21,13 +21,13 @@ export function ProjectsPage() {
       <div className="container">
         <div className="section-title">
           <div>
-            <h2>Все проекты</h2>
-            <p>Выбирай проект и смотри рефки пользователей.</p>
+            <h2>All Projects</h2>
+            <p>Pick a project and browse referral links from the community.</p>
           </div>
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Поиск проекта..."
+            placeholder="Search projects..."
             style={{ maxWidth: 360 }}
           />
         </div>

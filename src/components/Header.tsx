@@ -11,10 +11,10 @@ export function Header() {
         </NavLink>
 
         <nav className="nav">
-          <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Главная</NavLink>
-          <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>Проекты</NavLink>
-          <NavLink to="/referrals" className={({ isActive }) => isActive ? 'active' : ''}>Рефки</NavLink>
-          <NavLink to="/add" className={({ isActive }) => isActive ? 'active' : ''}>Добавить</NavLink>
+          <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
+          <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>Projects</NavLink>
+          <NavLink to="/referrals" className={({ isActive }) => isActive ? 'active' : ''}>Referrals</NavLink>
+          <NavLink to="/add" className={({ isActive }) => isActive ? 'active' : ''}>Add Link</NavLink>
         </nav>
       </div>
     </header>

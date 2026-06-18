@@ -20,13 +20,13 @@ export function ReferralsPage() {
       <div className="container">
         <div className="section-title">
           <div>
-            <h2>Все рефералки</h2>
-            <p>Единая лента ссылок по всем проектам.</p>
+            <h2>All Referrals</h2>
+            <p>A single feed of referral links across all projects.</p>
           </div>
           <div className="actions">
-            <button className={`btn ${sort === 'popular' ? 'primary' : ''}`} onClick={() => setSort('popular')}>🔥 Популярные</button>
-            <button className={`btn ${sort === 'new' ? 'primary' : ''}`} onClick={() => setSort('new')}>🆕 Новые</button>
-            <button className={`btn ${sort === 'likes' ? 'primary' : ''}`} onClick={() => setSort('likes')}>👍 По лайкам</button>
+            <button className={`btn ${sort === 'popular' ? 'primary' : ''}`} onClick={() => setSort('popular')}>🔥 Popular</button>
+            <button className={`btn ${sort === 'new' ? 'primary' : ''}`} onClick={() => setSort('new')}>🆕 New</button>
+            <button className={`btn ${sort === 'likes' ? 'primary' : ''}`} onClick={() => setSort('likes')}>👍 Top Liked</button>
           </div>
         </div>
 

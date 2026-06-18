@@ -10,7 +10,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className="card" onClick={() => navigate(`/projects/${project.id}`)}>
       <div className="card-top">
         <div className="project-logo">{project.logo}</div>
-        <span className="status">{project.status === 'active' ? 'Активен' : project.status}</span>
+        <span className="status">{project.status === 'active' ? 'Active' : project.status}</span>
       </div>
       <h3>{project.name}</h3>
       <div className="muted">{project.short}</div>
@@ -19,8 +19,8 @@ export function ProjectCard({ project }: { project: Project }) {
         {project.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}
       </div>
       <div className="card-footer">
-        <span>🔥 {stats.referrals} рефок</span>
-        <span>👥 {stats.users} юзеров</span>
+        <span>🔥 {stats.referrals} refs</span>
+        <span>👥 {stats.users} users</span>
         <span>👍 {stats.likes}</span>
       </div>
     </article>
