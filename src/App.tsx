@@ -1,33 +1,26 @@
-import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header';
-import { Home } from './pages/Home';
-import { ProjectsPage } from './pages/ProjectsPage';
-import { ProjectDetail } from './pages/ProjectDetail';
-import { ReferralsPage } from './pages/ReferralsPage';
 import { AddReferralPage } from './pages/AddReferralPage';
-
-type Page = 'home' | 'projects' | 'referrals' | 'add' | 'project';
+import { Home } from './pages/Home';
+import { ProjectDetail } from './pages/ProjectDetail';
+import { ProjectsPage } from './pages/ProjectsPage';
+import { ReferralsPage } from './pages/ReferralsPage';
 
 export default function App() {
-  const [page, setPage] = useState<Page>('home');
-  const [selectedProject, setSelectedProject] = useState<string>('ink');
-
-  const openProject = (projectId: string) => {
-    setSelectedProject(projectId);
-    setPage('project');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <>
-      <Header page={page === 'project' ? 'projects' : page} setPage={setPage} />
-      {page === 'home' && <Home setPage={setPage} openProject={openProject} />}
-      {page === 'projects' && <ProjectsPage openProject={openProject} />}
-      {page === 'project' && <ProjectDetail projectId={selectedProject} back={() => setPage('projects')} addReferral={() => setPage('add')} />}
-      {page === 'referrals' && <ReferralsPage />}
-      {page === 'add' && <AddReferralPage />}
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
+        <Route path="/referrals" element={<ReferralsPage />} />
+        <Route path="/add" element={<AddReferralPage />} />
+      </Routes>
       <footer className="footer">
-        <div className="container">CryptoRef — сделано для крипто-комьюнити. MVP без backend, данные лежат в src/data.</div>
+        <div className="container">
+          CryptoRef — сделано для крипто-комьюнити. MVP без backend, данные лежат в src/data.
+        </div>
       </footer>
     </>
   );

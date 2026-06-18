@@ -12,7 +12,7 @@ export const projects: Project[] = [
     logo: '🟣',
     website: 'https://inkonchain.com',
     status: 'active',
-    tags: ['L2', 'Kraken', 'Quests', 'NFT']
+    tags: ['L2', 'Kraken', 'Quests', 'NFT'],
   },
   {
     id: 'citrea',
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     logo: '🟠',
     website: 'https://citrea.xyz',
     status: 'active',
-    tags: ['BTC', 'L2', 'Airdrop']
+    tags: ['BTC', 'L2', 'Airdrop'],
   },
   {
     id: 'monad',
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     logo: '🟪',
     website: 'https://monad.xyz',
     status: 'active',
-    tags: ['L1', 'Testnet', 'Discord']
+    tags: ['L1', 'Testnet', 'Discord'],
   },
   {
     id: 'arc',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     logo: '🔵',
     website: '#',
     status: 'active',
-    tags: ['RWA', 'Circle', 'WL']
+    tags: ['RWA', 'Circle', 'WL'],
   },
   {
     id: 'rax',
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     logo: '🧠',
     website: '#',
     status: 'active',
-    tags: ['AI', 'RWA', 'Waitlist']
+    tags: ['AI', 'RWA', 'Waitlist'],
   },
   {
     id: 'push',
@@ -77,6 +77,6 @@ export const projects: Project[] = [
     logo: '📨',
     website: 'https://push.org',
     status: 'active',
-    tags: ['Infra', 'Rewards', 'PUSD']
-  }
+    tags: ['Infra', 'Rewards', 'PUSD'],
+  },
 ];

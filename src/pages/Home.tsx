@@ -3,15 +3,10 @@ import { ProjectCard } from '../components/ProjectCard';
 import { projects } from '../data/projects';
 import { topUsers } from '../utils/stats';
 
-interface HomeProps {
-  setPage: (page: 'projects' | 'add') => void;
-  openProject: (projectId: string) => void;
-}
-
-export function Home({ setPage, openProject }: HomeProps) {
+export function Home() {
   return (
     <>
-      <Hero setPage={setPage} />
+      <Hero />
       <section className="section">
         <div className="container">
           <div className="section-title">
@@ -21,10 +16,13 @@ export function Home({ setPage, openProject }: HomeProps) {
             </div>
           </div>
           <div className="grid">
-            {projects.slice(0, 3).map((project) => <ProjectCard key={project.id} project={project} onOpen={openProject} />)}
+            {projects.slice(0, 3).map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
           </div>
         </div>
       </section>
+
       <section className="section">
         <div className="container">
           <div className="panel">
@@ -38,7 +36,9 @@ export function Home({ setPage, openProject }: HomeProps) {
               {topUsers.slice(0, 5).map((user, index) => (
                 <div className="rank-row" key={user.user}>
                   <strong>#{index + 1} {user.user}</strong>
-                  <span className="muted">{user.referrals} рефок • {user.likes} лайков • {user.clicks} переходов</span>
+                  <span className="muted">
+                    {user.referrals} рефок • {user.likes} лайков • {user.clicks} переходов
+                  </span>
                 </div>
               ))}
             </div>

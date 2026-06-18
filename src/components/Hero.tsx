@@ -1,9 +1,10 @@
 import { Sparkles } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { globalStats } from '../utils/stats';
 
-interface HeroProps { setPage: (page: 'projects' | 'add') => void; }
+export function Hero() {
+  const navigate = useNavigate();
 
-export function Hero({ setPage }: HeroProps) {
   return (
     <section className="hero">
       <div className="container">
@@ -11,8 +12,8 @@ export function Hero({ setPage }: HeroProps) {
         <h1>Найди лучшие <span className="gradient">рефералки</span> для дропов и тестнетов</h1>
         <p>Собираем актуальные ссылки на Ink, Citrea, Monad, Arc, RAX и другие проекты. Добавляй свою рефку, получай переходы и поднимайся в топ.</p>
         <div className="actions">
-          <button className="btn primary" onClick={() => setPage('projects')}>Смотреть проекты</button>
-          <button className="btn" onClick={() => setPage('add')}>Добавить рефку</button>
+          <button className="btn primary" onClick={() => navigate('/projects')}>Смотреть проекты</button>
+          <button className="btn" onClick={() => navigate('/add')}>Добавить рефку</button>
         </div>
         <div className="stats">
           <div className="stat"><strong>{globalStats.referrals}+</strong><span>реферальных ссылок</span></div>

@@ -29,11 +29,14 @@ export function ReferralsPage() {
             <button className={`btn ${sort === 'likes' ? 'primary' : ''}`} onClick={() => setSort('likes')}>👍 По лайкам</button>
           </div>
         </div>
+
         {list.map((ref) => {
           const project = projects.find((item) => item.id === ref.projectId);
           return (
             <div key={ref.id}>
-              <div className="muted" style={{ margin: '0 0 8px 6px' }}>{project?.logo} {project?.name}</div>
+              <div className="muted" style={{ margin: '0 0 8px 6px' }}>
+                {project?.logo} {project?.name}
+              </div>
               <ReferralCard referral={ref} />
             </div>
           );

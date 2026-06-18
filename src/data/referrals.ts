@@ -12,7 +12,7 @@ export const referrals: Referral[] = [
     likes: 42,
     clicks: 214,
     createdAt: '2026-06-18',
-    verified: true
+    verified: true,
   },
   {
     id: 'r2',
@@ -25,7 +25,7 @@ export const referrals: Referral[] = [
     likes: 31,
     clicks: 132,
     createdAt: '2026-06-16',
-    verified: true
+    verified: true,
   },
   {
     id: 'r3',
@@ -36,7 +36,7 @@ export const referrals: Referral[] = [
     description: 'Для тех, кто фармит Monad и роли в Discord.',
     likes: 19,
     clicks: 88,
-    createdAt: '2026-06-15'
+    createdAt: '2026-06-15',
   },
   {
     id: 'r4',
@@ -47,7 +47,7 @@ export const referrals: Referral[] = [
     description: 'Waitlist + квесты, без вложений.',
     likes: 15,
     clicks: 61,
-    createdAt: '2026-06-14'
+    createdAt: '2026-06-14',
   },
   {
     id: 'r5',
@@ -58,6 +58,6 @@ export const referrals: Referral[] = [
     description: 'Сезонные награды, активность через PUSD.',
     likes: 11,
     clicks: 44,
-    createdAt: '2026-06-13'
-  }
+    createdAt: '2026-06-13',
+  },
 ];

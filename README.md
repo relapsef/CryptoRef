@@ -1,6 +1,13 @@
 # CryptoRef Hub
 
-MVP сайта, где люди могут смотреть проекты и оставлять реферальные ссылки под конкретным проектом.
+База крипто-проектов и реферальных ссылок. MVP без backend — данные хранятся в `src/data`.
+
+## Стек
+
+- React 19 + TypeScript
+- Vite 6
+- react-router-dom v7
+- lucide-react
 
 ## Запуск
 
@@ -9,30 +16,25 @@ npm install
 npm run dev
 ```
 
-## Где менять проекты
+## Деплой на Vercel
 
-`src/data/projects.ts`
+Просто подключи репо — Vercel автоматически определит Vite-проект.  
+`vercel.json` уже настроен для SPA-роутинга.
 
-## Где менять рефки
+## Добавить реальный backend
 
-`src/data/referrals.ts`
+Сейчас данные — статика в `src/data/`. Для реального хранения подключи:
+- [Supabase](https://supabase.com) — postgres + realtime
+- [Airtable](https://airtable.com) — no-code БД
+- [Firebase](https://firebase.google.com) — realtime database
 
-## Что уже есть
+## Структура
 
-- Главная с hero-блоком
-- Каталог проектов
-- Страница проекта
-- Список рефок под проектом
-- Лента всех рефок
-- Топ пользователей
-- Демо-форма добавления рефки
-
-## Что подключить потом
-
-Чтобы пользователи реально добавляли рефки, подключи backend:
-
-- Airtable — проще всего
-- Supabase — лучше для нормального проекта
-- Firebase — тоже ок
-
-В MVP форма пока показывает alert и не сохраняет данные.
+```
+src/
+  components/   — Header, Hero, ProjectCard, ReferralCard
+  pages/        — Home, ProjectsPage, ProjectDetail, ReferralsPage, AddReferralPage
+  data/         — projects.ts, referrals.ts
+  types/        — index.ts
+  utils/        — stats.ts
+```

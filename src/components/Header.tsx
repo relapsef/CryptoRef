@@ -1,26 +1,20 @@
 import { Link2 } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 
-type Page = 'home' | 'projects' | 'referrals' | 'add';
-
-interface HeaderProps {
-  page: Page;
-  setPage: (page: Page) => void;
-}
-
-export function Header({ page, setPage }: HeaderProps) {
+export function Header() {
   return (
     <header className="header">
       <div className="container header-inner">
-        <button className="logo" onClick={() => setPage('home')} style={{ background: 'transparent', border: 0, color: 'white', cursor: 'pointer' }}>
+        <NavLink to="/" className="logo">
           <div className="logo-icon"><Link2 size={22} /></div>
           <span>Crypto<span>Ref</span></span>
-        </button>
+        </NavLink>
 
         <nav className="nav">
-          <button className={page === 'home' ? 'active' : ''} onClick={() => setPage('home')}>Главная</button>
-          <button className={page === 'projects' ? 'active' : ''} onClick={() => setPage('projects')}>Проекты</button>
-          <button className={page === 'referrals' ? 'active' : ''} onClick={() => setPage('referrals')}>Рефки</button>
-          <button className={page === 'add' ? 'active' : ''} onClick={() => setPage('add')}>Добавить</button>
+          <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Главная</NavLink>
+          <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>Проекты</NavLink>
+          <NavLink to="/referrals" className={({ isActive }) => isActive ? 'active' : ''}>Рефки</NavLink>
+          <NavLink to="/add" className={({ isActive }) => isActive ? 'active' : ''}>Добавить</NavLink>
         </nav>
       </div>
     </header>
