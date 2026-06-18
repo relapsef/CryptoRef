@@ -1,0 +1,63 @@
+import type { Referral } from '../types';
+
+export const referrals: Referral[] = [
+  {
+    id: 'r1',
+    projectId: 'ink',
+    user: 'Shikigami',
+    telegram: '@mashiros17s',
+    title: 'Моя Ink рефка',
+    link: 'https://example.com/ink-ref',
+    description: 'Залетайте через рефку, буду обновлять гайд и активности по Ink.',
+    likes: 42,
+    clicks: 214,
+    createdAt: '2026-06-18',
+    verified: true
+  },
+  {
+    id: 'r2',
+    projectId: 'citrea',
+    user: 'CryptoGhoul',
+    telegram: '@cryptoghoul',
+    title: 'Citrea portal ref',
+    link: 'https://example.com/citrea-ref',
+    description: 'Рефка под Citrea, актуальные задания и быстрый старт.',
+    likes: 31,
+    clicks: 132,
+    createdAt: '2026-06-16',
+    verified: true
+  },
+  {
+    id: 'r3',
+    projectId: 'monad',
+    user: 'User123',
+    title: 'Monad testnet ref',
+    link: 'https://example.com/monad-ref',
+    description: 'Для тех, кто фармит Monad и роли в Discord.',
+    likes: 19,
+    clicks: 88,
+    createdAt: '2026-06-15'
+  },
+  {
+    id: 'r4',
+    projectId: 'rax',
+    user: 'RWA Hunter',
+    title: 'RAX waitlist',
+    link: 'https://example.com/rax-ref',
+    description: 'Waitlist + квесты, без вложений.',
+    likes: 15,
+    clicks: 61,
+    createdAt: '2026-06-14'
+  },
+  {
+    id: 'r5',
+    projectId: 'push',
+    user: 'AirdropMax',
+    title: 'Push Chain season',
+    link: 'https://example.com/push-ref',
+    description: 'Сезонные награды, активность через PUSD.',
+    likes: 11,
+    clicks: 44,
+    createdAt: '2026-06-13'
+  }
+];
