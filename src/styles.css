@@ -90,3 +90,5 @@ h1 { font-size: clamp(44px, 7vw, 84px); line-height: 1.05; margin: 30px auto 20p
   .header-inner { height: auto; padding: 14px 0; align-items: start; flex-direction: column; gap: 10px; }
   .nav { width: 100%; overflow: auto; }
 }
+
+.form-label { display: block; font-weight: 700; font-size: 14px; margin-bottom: 7px; color: #c4d0e8; }

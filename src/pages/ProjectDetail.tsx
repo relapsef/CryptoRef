@@ -2,7 +2,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ReferralCard } from '../components/ReferralCard';
 import { projects } from '../data/projects';
-import { referrals } from '../data/referrals';
+import { getAllReferrals } from '../utils/storage';
 import { getProjectStats } from '../utils/stats';
 
 export function ProjectDetail() {
@@ -25,8 +25,9 @@ export function ProjectDetail() {
     );
   }
 
+  const allReferrals = getAllReferrals();
   const stats = getProjectStats(project.id);
-  const projectReferrals = referrals
+  const projectReferrals = allReferrals
     .filter((ref) => ref.projectId === project.id)
     .sort((a, b) => b.likes - a.likes);
 
@@ -52,7 +53,7 @@ export function ProjectDetail() {
             </button>
           </div>
           <div className="stats" style={{ maxWidth: 'none' }}>
-            <div className="stat"><strong>{stats.referrals}</strong><span>ref links</span></div>
+            <div className="stat"><strong>{projectReferrals.length}</strong><span>ref links</span></div>
             <div className="stat"><strong>{stats.users}</strong><span>users</span></div>
             <div className="stat"><strong>{stats.likes}</strong><span>likes</span></div>
           </div>
@@ -61,7 +62,7 @@ export function ProjectDetail() {
         <div className="section-title" style={{ marginTop: 34 }}>
           <div>
             <h2>Community Referrals</h2>
-            <p>Sorted by likes. Real likes and auth can be added later.</p>
+            <p>Sorted by likes.</p>
           </div>
         </div>
 

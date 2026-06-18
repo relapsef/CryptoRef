@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { ReferralCard } from '../components/ReferralCard';
 import { projects } from '../data/projects';
-import { referrals } from '../data/referrals';
+import { getAllReferrals } from '../utils/storage';
 
 type Sort = 'popular' | 'new' | 'likes';
 
@@ -9,7 +9,7 @@ export function ReferralsPage() {
   const [sort, setSort] = useState<Sort>('popular');
 
   const list = useMemo(() => {
-    const copy = [...referrals];
+    const copy = [...getAllReferrals()];
     if (sort === 'new') return copy.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
     if (sort === 'likes') return copy.sort((a, b) => b.likes - a.likes);
     return copy.sort((a, b) => b.likes + b.clicks - (a.likes + a.clicks));
