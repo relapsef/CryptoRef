@@ -18,8 +18,7 @@ export default function App() {
         <Route path="/add" element={<AddReferralPage />} />
       </Routes>
       <footer className="footer">
-        <div className="container">
-          CryptoRef — сделано для крипто-комьюнити. MVP без backend, данные лежат в src/data.
+        <div className="container">CryptoRef © 2026</div>
         </div>
       </footer>
     </>

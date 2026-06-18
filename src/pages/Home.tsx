@@ -22,22 +22,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="panel">
-            <div className="section-title">
-              <div>
-                <h2>🏆 Топ рефоводы</h2>
-                <p>Чем больше лайков и переходов, тем выше пользователь в рейтинге.</p>
-              </div>
-            </div>
-            <div className="rank">
-              {topUsers.slice(0, 5).map((user, index) => (
-                <div className="rank-row" key={user.user}>
-                  <strong>#{index + 1} {user.user}</strong>
-                  <span className="muted">
-                    {user.referrals} рефок • {user.likes} лайков • {user.clicks} переходов
                   </span>
                 </div>
               ))}
